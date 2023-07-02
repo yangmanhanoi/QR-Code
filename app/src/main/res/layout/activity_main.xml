@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F0F0F0"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/img_illu"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/qrcode_creative" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_illu"
+        android:layout_marginTop="15dp"
+        style="@style/dialog_title"
+        android:text="Welcome to my QRcode" />
+
+    <LinearLayout
+        android:id="@+id/ln_1"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/cd_genarate"
+            android:backgroundTint="@color/white"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:paddingVertical="15dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/img_genetate"
+                    android:src="@drawable/icon_generate"
+                    android:layout_width="50dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="50dp"/>
+                <TextView
+                    android:paddingVertical="10dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/img_genetate"
+                    android:layout_width="match_parent"
+                    android:text="Generate"
+                    style="@style/normal_text"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/cd_scan"
+            android:backgroundTint="@color/white"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:paddingVertical="15dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/img_scan"
+                    android:src="@drawable/icon_scan"
+                    android:layout_width="50dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="50dp"/>
+                <TextView
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/img_scan"
+                    android:layout_width="match_parent"
+                    android:text="Scan"
+                    style="@style/normal_text"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_2"
+        android:layout_below="@+id/ln_1"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="10dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/cd_send"
+            android:backgroundTint="@color/white"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:paddingVertical="15dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/img_send"
+                    android:src="@drawable/icon_send"
+                    android:layout_width="50dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="50dp"/>
+                <TextView
+                    android:paddingVertical="10dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/img_genetate"
+                    android:layout_width="match_parent"
+                    android:text="Send"
+                    style="@style/normal_text"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/cd_download"
+            android:backgroundTint="@color/white"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:paddingVertical="15dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/img_download"
+                    android:src="@drawable/icon_download"
+                    android:layout_width="50dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="50dp"/>
+                <TextView
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/img_scan"
+                    android:layout_width="match_parent"
+                    android:text="Download"
+                    style="@style/normal_text"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ln_2"
+        android:text="History"
+        android:textSize="20dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/custom_button_history"
+        android:fontFamily="@font/nomall"
+        android:layout_marginTop="20dp" >
+    </androidx.appcompat.widget.AppCompatButton>
+</RelativeLayout>
